@@ -93,7 +93,7 @@ class Rnd_struc_gen_pyxtal:
                 with redirect_stdout(f):
                     tmp_crystal.from_random(dim=3, group=spg, species=rin.atype,
                                             numIons=rin.nat, factor=rand_vol,
-                                            conventional=False, tm=tolmat)
+                                            conventional=True, tm=tolmat)
                 s = f.getvalue().rstrip()    # to delete \n
                 if s:
                     logger.warning(s)
